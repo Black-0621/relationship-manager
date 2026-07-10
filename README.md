@@ -10,6 +10,16 @@
 
 这个项目不鼓励操控关系，也不是情感裁判。它更像一个本地笔记本：帮你把发生过的事留好，把自己的判断和 AI 的整理分开，把事实、感受和分析放在一个更清楚的位置。
 
+## 界面预览
+
+<p align="center">
+  <img src="docs/images/interface-overview.png" alt="人际关系管理器档案总览界面" width="900">
+</p>
+
+<p align="center">
+  <img src="docs/images/interface-workbench.png" alt="人际关系管理器 AI 工作台界面" width="900">
+</p>
+
 ## 主要功能
 
 - 人物档案：为不同对象建立独立档案，记录名称、标签、简介、人物画像和相处方式。
