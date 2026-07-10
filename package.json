@@ -1,0 +1,19 @@
+{
+  "name": "relationship-manager",
+  "private": true,
+  "version": "0.3.8",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve-local.cjs",
+    "serve": "node scripts/serve-local.cjs",
+    "dev": "vite --host 0.0.0.0 --port 4175 --strictPort",
+    "build": "vite build",
+    "build:static": "node scripts/build-static.cjs",
+    "offline": "node scripts/build-offline.cjs",
+    "release": "npm run build:static && npm run offline"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.5",
+    "vite": "^8.0.16"
+  }
+}
