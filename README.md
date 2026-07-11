@@ -12,21 +12,27 @@
 
 她说不行，太麻烦了，除非市面上有一个现成的软件。
 
-于是我为了帮她这个忙，先手搓了一个“鱼塘管理器”。做着做着，我发现它其实不只适合用来管理暧昧关系，也可以更通用地记录你和每一个人之间发生过的事情：有仇的记仇，有恩的记恩，朋友、对象、亲人、同事、合作伙伴都可以记录，甚至也可以记录你和宠物之间的日常互动。
+于是我为了帮她这个忙，先手搓了一个“鱼塘管理器”。
 
-所以它最终变成了现在这个名字：**人际关系管理器**。
+最初的概念图是这样的，当时的名字还叫“心动档案馆”。
+
+<p align="center">
+  <img src="docs/images/readme/readme-01-concept.png" alt="最初概念图：心动档案馆" width="900">
+</p>
+
+后来我觉得这个版本太像游戏界面，不够简约，也不太符合我现在想要的方向，于是又把界面重新整理了一版。
+
+<p align="center">
+  <img src="docs/images/readme/readme-02-first-ui.png" alt="人际关系管理器当前界面" width="900">
+</p>
+
+做着做着，我突然发现，这不仅可以当做“鱼塘管理器”，它其实可以做成一个更通用的人际关系管理器：记录你和每一个人发生的一些事情，有仇的记仇，有恩的记恩。
+
+甚至，你也可以拿它记录和宠物之间的日常。
+
+所以慢慢地，整个项目的重心发生了变化，最终变成了现在这个名字：**人际关系管理器**。
 
 这个项目不鼓励操控关系，也不是情感裁判。它更像一个本地笔记本：帮你把发生过的事情留好，把事实、感受、判断和 AI 的整理放在一个更清楚的位置。
-
-## 界面预览
-
-<p align="center">
-  <img src="docs/images/interface-overview.png" alt="人际关系管理器档案总览界面" width="900">
-</p>
-
-<p align="center">
-  <img src="docs/images/interface-workbench.png" alt="人际关系管理器 AI 工作台界面" width="900">
-</p>
 
 ## 主要功能
 
@@ -78,41 +84,77 @@ npm run release
 
 下面用“记录和对象的日常”为例，简单说明用法。
 
-### 1. 配置本地保存和 AI
+### 1. 先上传自己的头像和资料
 
-拿到软件之后，建议先进入设置页，选择一个固定的本地文件夹。之后软件会把你的档案、事件、聊天记录和可读 Markdown 自动保存到这个文件夹里。
+拿到软件之后，可以先上传自己的头像和资料。时间久了之后，AI 可以根据你的个人资料，以及你长期输入和对话的内容，帮助你总结用户画像。
+
+<p align="center">
+  <img src="docs/images/readme/readme-03-user-profile.png" alt="上传用户资料" width="760">
+</p>
+
+<p align="center">
+  <img src="docs/images/readme/readme-04-user-avatar.png" alt="上传用户头像" width="760">
+</p>
+
+### 2. 配置本地保存和 AI
+
+在正式使用前，建议先进入设置页，选择一个固定的本地文件夹。之后软件会把你的档案、事件、聊天记录和可读 Markdown 自动保存到这个文件夹里。
+
+<p align="center">
+  <img src="docs/images/readme/readme-05-local-folder.png" alt="配置本地数据文件夹" width="760">
+</p>
 
 如果你要使用 AI 功能，也需要在设置里配置自己的 AI API。目前我主要基于 DeepSeek 测试。一般来说，模型能力越强，整理效果越好。
 
-### 2. 建立人物档案
+<p align="center">
+  <img src="docs/images/readme/readme-06-ai-settings.png" alt="配置 AI API" width="760">
+</p>
 
-先新建一个人物档案，可以上传头像，填写名称、标签、简介、相处方式等信息。
+### 3. 建立人物档案并记录事件
+
+建立一个人物档案后，可以上传头像，填写名称、标签、简介、相处方式等信息。
 
 头像上传后，会保存在本地数据里，不会自动发送给 AI。
 
-### 3. 记录发生过的事情
+在“关系时间线 / 发生过什么”里，可以记录你和这个人物发生的一些事情。你可以点击“新增事件”，一条一条手动添加。
 
-在“关系时间线 / 发生过什么”里，可以记录你和这个人物发生的一些事情。
+也可以把你和这个人发生的一切事情写成一个文档，上传后让 AI 帮你一次性整理。
 
-你可以：
+<p align="center">
+  <img src="docs/images/readme/readme-07-add-event.png" alt="新增事件和上传资料入口" width="760">
+</p>
 
-- 点击“新增事件”，一条一条手动添加；
-- 把你和这个人发生过的事情写成文档，再上传给 AI；
-- 把完整故事线粘贴进 AI 工作台，让 AI 帮你一次性整理。
+比如，可以选择仓库里的虚构测试故事线，然后点击“初建/重建故事线”。
 
-例如，可以选择 `examples/虚构测试故事线.md` 里的测试材料，然后点击“初建/重建故事线”。AI 会尝试把故事自动整理成不同时间节点，并同步更新关系时间线和关系阶段。
+<p align="center">
+  <img src="docs/images/readme/readme-08-select-story.png" alt="选择虚构测试故事线" width="760">
+</p>
 
-### 4. 更新档案和查看分析
+AI 会尝试把你和对象发生过的事情，智能总结成不同时间节点，并写入人际关系管理器。
 
-当你补充了新资料，可以点击“更新档案”，让 AI 根据当前资料重新整理人物档案、关系阶段、关系维度和下一步建议。
+<p align="center">
+  <img src="docs/images/readme/readme-09-timeline-result.png" alt="AI 整理后的关系时间线" width="760">
+</p>
 
-关系时间线、关系阶段、当前分析和行动建议会尽量保持同步。
+<p align="center">
+  <img src="docs/images/readme/readme-10-stage-result.png" alt="AI 整理后的关系阶段" width="760">
+</p>
 
-### 5. 直接和 AI 对话
+关系时间线和关系阶段会同步更新。同时，AI 也会对当前关系进行分析，并提出下一步行动建议。
+
+<p align="center">
+  <img src="docs/images/readme/readme-11-analysis-result.png" alt="AI 当前分析和行动建议" width="760">
+</p>
+
+### 4. 直接和 AI 对话
 
 如果你有什么不会的、不懂的、想问的，也可以在 AI 工作台里直接和 AI 对话。
 
 只要你关联了本地资料文件夹，聊天记录也会保存到本地 Markdown 中，方便之后回看。
+
+<p align="center">
+  <img src="docs/images/readme/readme-12-chat-record.png" alt="AI 对话记录保存" width="760">
+</p>
 
 ## 本地保存说明
 
